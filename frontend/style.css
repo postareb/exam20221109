@@ -1,0 +1,32 @@
+#showMore {display: none;}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+#mainContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+.card {
+    display: flex;
+    padding: 1rem 1rem;
+    gap: 0.1rem;
+    flex-wrap: wrap;
+
+}
+
+.card img {
+    width: 4rem;
+}
