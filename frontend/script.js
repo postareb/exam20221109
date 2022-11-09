@@ -28,15 +28,23 @@ const getDatas = async () => {
         createImg.innerHTML = `<img src="${requestInfos[i].avatar_url}"/>`
         const createLoginName = document.createElement("p");
         createLoginName.innerHTML = `<p id="${requestInfos[i].login}">${requestInfos[i].login}</p>`
+        const createUserType = document.createElement ("p");
+        createUserType.innerHTML = `<p id="${requestInfos[i].type}">${requestInfos[i].type}</p>`
+        const createAdminType = document.createElement ("p");
+        createAdminType.innerHTML = `<p id="${requestInfos[i].site_admin}">${requestInfos[i].site_admin}</p>`
         
         const createDiv = document.createElement("div");
         createDiv.classList.add("card");
         createDiv.innerHTML = `
         <img src="${requestInfos[i].avatar_url}"/>
-        <span id="${requestInfos[i].login}"></span>`
+        <p id="${requestInfos[i].login}">${requestInfos[i].login}</p>
+        <p id="${requestInfos[i].type}">${requestInfos[i].type}</p>
+        <p id="${requestInfos[i].site_admin}">${requestInfos[i].site_admin}</p>
+        `
 
 
         card.appendChild(createDiv);
+
         }
 
 }
