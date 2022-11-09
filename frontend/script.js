@@ -1,23 +1,3 @@
-
-function myFunction() {
-    let whiteSpace = document.getElementById("whiteSpace");
-    let moreText = document.getElementById("showMore");
-    let btnText = document.getElementById("myBtn");
-  
-    if (whiteSpace.style.display === "none") {
-      whiteSpace.style.display = "inline";
-      btnText.innerHTML = "Show more";
-      moreText.style.display = "none";
-    } 
-    
-    else {
-      whiteSpace.style.display = "none";
-      btnText.innerHTML = "Show less";
-      moreText.style.display = "inline";
-    }
-}
-
-
 const getDatas = async () => {
     const request = await fetch("https://api.github.com/users");
     const requestInfos = await request.json();
@@ -38,8 +18,8 @@ const getDatas = async () => {
         createDiv.innerHTML = `
         <img src="${requestInfos[i].avatar_url}"/>
         <p id="${requestInfos[i].login}">${requestInfos[i].login}</p>
-        <p id="${requestInfos[i].type}">${requestInfos[i].type}</p>
-        <p id="${requestInfos[i].site_admin}">${requestInfos[i].site_admin}</p>
+        <p id="${requestInfos[i].type}">Rank: ${requestInfos[i].type}</p>
+        <p id="${requestInfos[i].site_admin}">Admin: ${requestInfos[i].site_admin}</p>
         `
 
 
